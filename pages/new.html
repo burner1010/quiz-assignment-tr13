@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Quizio</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="module" src="../assets/js/script.js" defer></script>
+    <script src="../assets/bootstrap/js/bootstrap.min.js" defer></script>
+    <script type="module" src="new.js" defer></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-body py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <span
+                    class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon">
+                    <img src="../assets/img/logo.svg" alt="Logo of Quizio">
+                </span>
+                <span>QUIZIO</span>
+            </a>
+            <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-3">
+                <span class="visually-hidden">
+                    Toggle navigation
+                </span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navcol-3">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="./dashboard.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./quizes.html">QUiZES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">ABOUT</a></li>
+                </ul><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#questionModal">NEW QUESTION</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container py-4">
+        <form>
+            <label for="title">Title</label>
+            <input class="form-control mt-4" placeholder="New Quiz Title" type="text" name="title" id="title">
+                
+            <div class="justify-content-end mt-3 d-flex">
+                <button class="btn btn-primary">Save Quiz</button>
+            </div>
+        </form>
+        <div class="questions mt-4">
+            <h1>No Questions Yet</h1>
+        </div>
+    </section>
+
+
+   
+
+    <!-- Modal -->
+
+    <div class="modal fade" id="questionModal" tabindex="-1" aria-labelledby="questionModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="questionModalLabel">Add a question</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="questionForm">
+                        <label for="title">Question</label>
+                        <input class="form-control" type="text" name="title" id="title"/>
+                        <fieldset class="mt-4">
+                            <div class="row">
+                                <div class="col">
+                                    <label for="opt1">Option 1</label>
+                                    <input class="col form-control" type="text" name="opt1" id="opt1"/>
+                                </div>
+                                <div class="col">
+                                    
+                                    <label for="opt2">Option 2</label>
+                                    <input class="col form-control" type="text" name="opt2" id="opt2"/>    
+                                </div>
+                            </div>
+                            <div class="row" class="mt-2">
+                                <div class="col">
+                                    
+                                    <label for="opt3">Option 3</label>
+                                    <input class="col form-control" type="text" name="opt3" id="opt3"/>
+                                </div>
+                                <div class="col">
+                                    
+                                    <label for="opt4">Option 4</label>
+                                    <input class="col form-control" type="text" name="opt4" id="opt4"/>    
+                                </div>
+                            </div>
+                        </fieldset>
+                        <label for="correct" class="mt-4">Correct Option</label>
+                        <select name="correct" id="correct" class="form-select">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add question</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
